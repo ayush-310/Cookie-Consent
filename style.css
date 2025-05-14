@@ -1,34 +1,42 @@
-.container{
+.container {
     position: relative;
     height: 100vh;
 }
 
-.cookie{
-    height: 300px;
-    width: 300px;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-    padding: 20px;
-    margin: 20px;
+.cookie {
     display: none;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.buttons{
+.cookie.visible {
+    display: block;
+}
+
+.cookie .close {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.buttons {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     width: 100%;
 }
 
 
-#accept-cookies{
+#accept-cookies {
     background-color: green;
     color: white;
     border: none;
@@ -37,7 +45,7 @@
     cursor: pointer;
 }
 
-#decline-cookies{
+#decline-cookies {
     background-color: red;
     color: white;
     border: none;
@@ -46,12 +54,12 @@
     cursor: pointer;
 }
 
-.X{
+.X {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
-    border-radius:50% ;
+    border-radius: 50%;
     background-color: white;
     color: black;
     padding: 10px;
